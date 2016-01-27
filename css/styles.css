@@ -1,0 +1,41 @@
+img {
+  width: 100%;
+  display: none;
+  padding-top: 20px;
+}
+
+.btn {
+  float:right;
+  margin-top: 30px;
+}
+
+body {
+  background-image: url(http://img11.deviantart.net/b40f/i/2009/207/f/a/blood_spatter_by_zeds_stock.jpg);
+  background-size: cover;
+}
+
+.jumbotron {
+  background-image: url(http://feelgrafix.com/data_images/out/14/888948-smoke-wallpaper.jpg);
+  color: white;
+  font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
+  font-size: 35px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 26.4px;
+}
+
+.tiny {
+  color:  #990000;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.display {
+  font-weight: bolder;
+  color: white;
+  font-size: 25px;
+  float: right;
+  }

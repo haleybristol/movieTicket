@@ -23,7 +23,7 @@ Ticket.prototype.matinee = function(){
 }
 
 Ticket.prototype.newRelease = function(){
-  if (this.movieName === "The Revenant" || this.movieName === "Star Wars" ) {
+  if (this.movieName === "The Forest" || this.movieName === "Pride and Prejudice and Zombies") {
     return (2);
   } else {
     return (1);
@@ -36,7 +36,19 @@ Ticket.prototype.finalPrice = function(){
 }
 
 $(document).ready(function() {
-  var testTicket = new Ticket("The Revenant", "6:00pm", "18");
-  var finalPrice = testTicket.finalPrice();
-
+  $("form#ticketForm").submit(function(event){
+    var movie = $("select#movie").val();
+    var time = $("select#time").val();
+    var age = $("select#age").val();
+    var testTicket = new Ticket(movie, time, age);
+    var finalPrice = testTicket.finalPrice();
+    $(".display").append("<p>Total: $" + finalPrice + ".00" + "</p>");
+    if(movie === "shining") {
+      $("#shining").show();
+    }
+    if(movie === "forest") {
+      $("#forest").show();
+    }
+    event.preventDefault()
+  });
 });
